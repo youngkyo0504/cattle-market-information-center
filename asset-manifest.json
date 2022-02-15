@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cattle-market-information-center/static/css/main.4ea70fc5.css",
-    "main.js": "/cattle-market-information-center/static/js/main.56a57bab.js",
+    "main.css": "/cattle-market-information-center/static/css/main.368ee5a9.css",
+    "main.js": "/cattle-market-information-center/static/js/main.70755b0b.js",
     "static/js/787.ded624b7.chunk.js": "/cattle-market-information-center/static/js/787.ded624b7.chunk.js",
     "static/media/cattle.png": "/cattle-market-information-center/static/media/cattle.d07de571e820a7bf4c37.png",
     "static/media/SpoqaHanSansNeo-Medium.ttf": "/cattle-market-information-center/static/media/SpoqaHanSansNeo-Medium.cf5c6ddcaec3f59a13c7.ttf",
@@ -12,12 +12,12 @@
     "static/media/SpoqaHanSansNeo-Medium.woff2": "/cattle-market-information-center/static/media/SpoqaHanSansNeo-Medium.8589927a4fa35d637a8d.woff2",
     "static/media/woo-logo.png": "/cattle-market-information-center/static/media/woo-logo.6aea706d1a8d13b91d17.png",
     "index.html": "/cattle-market-information-center/index.html",
-    "main.4ea70fc5.css.map": "/cattle-market-information-center/static/css/main.4ea70fc5.css.map",
-    "main.56a57bab.js.map": "/cattle-market-information-center/static/js/main.56a57bab.js.map",
+    "main.368ee5a9.css.map": "/cattle-market-information-center/static/css/main.368ee5a9.css.map",
+    "main.70755b0b.js.map": "/cattle-market-information-center/static/js/main.70755b0b.js.map",
     "787.ded624b7.chunk.js.map": "/cattle-market-information-center/static/js/787.ded624b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ea70fc5.css",
-    "static/js/main.56a57bab.js"
+    "static/css/main.368ee5a9.css",
+    "static/js/main.70755b0b.js"
   ]
 }
