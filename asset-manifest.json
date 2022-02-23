@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/cattle-market-information-center/static/css/main.9622797a.css",
-    "main.js": "/cattle-market-information-center/static/js/main.55ab0585.js",
+    "main.css": "/cattle-market-information-center/static/css/main.cb295c16.css",
+    "main.js": "/cattle-market-information-center/static/js/main.15409cd2.js",
     "static/js/787.ded624b7.chunk.js": "/cattle-market-information-center/static/js/787.ded624b7.chunk.js",
     "static/media/SpoqaHanSansNeo-Medium.ttf": "/cattle-market-information-center/static/media/SpoqaHanSansNeo-Medium.cf5c6ddcaec3f59a13c7.ttf",
     "static/media/SpoqaHanSansNeo-Bold.ttf": "/cattle-market-information-center/static/media/SpoqaHanSansNeo-Bold.9a610369db9d3c28b99f.ttf",
-    "static/media/cattle.png": "/cattle-market-information-center/static/media/cattle.8feb36ca41875a76c29b.png",
     "static/media/SpoqaHanSansNeo-Bold.woff": "/cattle-market-information-center/static/media/SpoqaHanSansNeo-Bold.dc75532918fd412e27a3.woff",
     "static/media/SpoqaHanSansNeo-Medium.woff": "/cattle-market-information-center/static/media/SpoqaHanSansNeo-Medium.823120084c9ac260b260.woff",
     "static/media/SpoqaHanSansNeo-Bold.woff2": "/cattle-market-information-center/static/media/SpoqaHanSansNeo-Bold.1db18034ccc384032a4a.woff2",
@@ -17,12 +16,12 @@
     "static/media/mail.svg": "/cattle-market-information-center/static/media/mail.fe9d1a2df8083ef4c7e8e47539a1d539.svg",
     "index.html": "/cattle-market-information-center/index.html",
     "static/media/facebook.svg": "/cattle-market-information-center/static/media/facebook.ef3fce3dafe8afcba1ad71fb9d900ec8.svg",
-    "main.9622797a.css.map": "/cattle-market-information-center/static/css/main.9622797a.css.map",
-    "main.55ab0585.js.map": "/cattle-market-information-center/static/js/main.55ab0585.js.map",
+    "main.cb295c16.css.map": "/cattle-market-information-center/static/css/main.cb295c16.css.map",
+    "main.15409cd2.js.map": "/cattle-market-information-center/static/js/main.15409cd2.js.map",
     "787.ded624b7.chunk.js.map": "/cattle-market-information-center/static/js/787.ded624b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9622797a.css",
-    "static/js/main.55ab0585.js"
+    "static/css/main.cb295c16.css",
+    "static/js/main.15409cd2.js"
   ]
 }
