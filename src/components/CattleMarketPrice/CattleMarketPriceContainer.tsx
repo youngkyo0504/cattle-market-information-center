@@ -13,8 +13,8 @@ import ICowGraphInfo from "../../@types/CowGraphInfo";
 
 const highChartDataMaker = HighChartCowDataMaker.getInstance();
 const cowPriceData = highChartDataMaker.getData(meatPrice, 10);
-const suPriceData = highChartDataMaker.getData(suPrice, 10);
-const amPriceData = highChartDataMaker.getData(amPrice, 10);
+const suPriceData = highChartDataMaker.getData(suPrice, 10, 2);
+const amPriceData = highChartDataMaker.getData(amPrice, 10, 2);
 const meanMeatPriceData = highChartDataMaker.getData(meanMeatPrice, 10);
 console.log([...suPriceData.data.lastYearData]);
 const seriesoption: Highcharts.SeriesOptionsType[] = [
@@ -91,19 +91,22 @@ const meatPriceOption = highChartOptionMaker.getMeatStockOptions(
 );
 
 const CattleMarketPriceContainer = () => {
+  console.log();
+  const meanMeatChangeOfPrice = meanMeatPriceData.changeOfPrice;
+  const suChangeOfPrice = suPriceData.changeOfPrice;
   const cowChangeOfPrice = cowPriceData.changeOfPrice;
   const cattleGraphInfo = {
+    rateOfChagne: suChangeOfPrice.rateOfChagne,
+    change: suChangeOfPrice.change,
+    latestData: suChangeOfPrice.latestData,
     ...cowGraphInfo.cow,
-    rateOfChagne: cowChangeOfPrice.rateOfChagne,
-    change: cowChangeOfPrice.change,
-    latestData: cowChangeOfPrice.latestData,
   } as ICowGraphInfo;
 
   const meatGraphInfo = {
+    rateOfChagne: meanMeatChangeOfPrice.rateOfChagne,
+    change: meanMeatChangeOfPrice.change,
+    latestData: meanMeatChangeOfPrice.latestData,
     ...cowGraphInfo.meat,
-    rateOfChagne: cowChangeOfPrice.rateOfChagne,
-    change: cowChangeOfPrice.change,
-    latestData: cowChangeOfPrice.latestData,
   } as ICowGraphInfo;
   return (
     <article className=" mx-auto px-4 sm:pb-14  sm:pt-8   md:max-w-full lg:max-w-9xl">

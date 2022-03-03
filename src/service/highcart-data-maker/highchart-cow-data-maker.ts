@@ -6,10 +6,14 @@ export default class HighChartCowDataMaker implements HighchartSeriesDataMaker {
   private static instance: HighchartSeriesDataMaker;
   private constructor() {}
 
-  public getData(cowPriceData: IPriceData[], divide: number = 1) {
+  public getData(
+    cowPriceData: IPriceData[],
+    divide: number = 1,
+    howLong: number = 1
+  ) {
     //*올해와 작년의 데이터가 반환된다.
     const { thisYearPriceData, lastYearPriceData } =
-      this.divideIntoLastYearAndThisYear(cowPriceData, divide);
+      this.divideIntoLastYearAndThisYear(cowPriceData, divide, howLong);
     // dependency cowData에 종속되어있다.
     const data = {
       lastYearData: lastYearPriceData,
@@ -28,9 +32,9 @@ export default class HighChartCowDataMaker implements HighchartSeriesDataMaker {
     const change = todayPrice - yesterdayPrice;
     const rateOfChage = (change / yesterdayPrice) * 100;
     return {
-      latestData: todayPrice,
-      change: change,
-      rateOfChagne: rateOfChage,
+      latestData: Number(todayPrice.toFixed(2)),
+      change: Number(change.toFixed(2)),
+      rateOfChagne: Number(rateOfChage.toFixed(2)),
     };
   }
 
@@ -41,12 +45,13 @@ export default class HighChartCowDataMaker implements HighchartSeriesDataMaker {
 
   private divideIntoLastYearAndThisYear(
     cowPriceData: IPriceData[],
-    divide: number
+    divide: number,
+    howLong: number
   ) {
     const YEAR = 86400000 * 365;
     const today = Number(cowPriceData[0].date[0]) * 1000;
-    const lastYearToday = today - YEAR;
-    const twoYearsAgoToday = lastYearToday - YEAR;
+    const nYearsAgoToday = today - howLong * YEAR;
+    const twoNYearsAgoToday = nYearsAgoToday - howLong * YEAR;
     const thisYearPriceData: number[][] = [];
     const lastYearPriceData: number[][] = [];
 
@@ -55,9 +60,9 @@ export default class HighChartCowDataMaker implements HighchartSeriesDataMaker {
       .filter((priceData) => this.isValid(priceData))
       .forEach((priceData) => {
         const { day, price } = this.getPriceAndDate(priceData);
-        if (day > lastYearToday) {
+        if (day > nYearsAgoToday) {
           thisYearPriceData.push([day, price / divide]);
-        } else if (day > twoYearsAgoToday) {
+        } else if (day > twoNYearsAgoToday) {
           lastYearPriceData.push([day + YEAR, price / divide]);
         }
       });

@@ -5,7 +5,8 @@ import HighStockSeriesData from "../../@types/HighStockSeriesData";
 export default interface HighchartSeriesDataMaker {
   getData(
     jsonData: IPriceData[],
-    divide: number
+    divide: number,
+    howLong?: number
   ): {
     data: HighStockSeriesData;
     changeOfPrice: Omit<ICowGraphInfo, "name" | "unit" | "reference">;
