@@ -10,15 +10,15 @@ const CattlePage = () => {
             우시장 둘러보기
           </h1>
           <div className="flex flex-col">
-            <div className="mb-3 flex justify-between border-b border-blue px-1.5 pb-3.5  font-medium -tracking-[0.03rem] text-blue  sm:text-lg ">
+            <div className="flex justify-between border-b border-blue px-1.5 pb-2.5 font-medium -tracking-[0.03rem]  text-blue sm:mb-3 sm:pb-3.5  sm:text-lg ">
               <span className="font-bold">우시장 목록</span>
             </div>
           </div>
-          <ul>
+          <ul className="grid grid-cols-2 gap-x-4 sm:block">
             {Object.values(cattleMarket).map((market) => (
               <li
                 onClick={() => {}}
-                className="cursor-pointer px-1.5 py-2 text-xs font-bold -tracking-[0.025rem] text-gray-nav hover:text-blue sm:text-base "
+                className=" cursor-pointer border-b border-gray-info px-1.5 py-2 text-xs font-bold -tracking-[0.025rem] text-gray-nav hover:text-blue sm:w-full sm:border-0 sm:text-base "
               >
                 {market.title}
               </li>

@@ -4,7 +4,7 @@ import QaImage from "../../assets/qa-images/qna@2x.png";
 
 const FaqPage = () => {
   return (
-    <section className="mx-auto mt-24 mb-36 flex min-h-[65vh] max-w-9xl flex-col p-4 md:mt-48 md:flex-row md:justify-between">
+    <section className="mx-auto mt-24 mb-20 flex min-h-[65vh] max-w-9xl flex-col p-4 sm:mb-36 md:mt-48 md:flex-row md:justify-between">
       <div className=" flex flex-col justify-between">
         <div>
           <h1 className="flex flex-col text-3xl font-bold tracking-[-0.73px] text-blue md:flex-row">
@@ -53,7 +53,7 @@ const FaqPage = () => {
         <div className="mt-16 flex flex-col md:mt-28 md:first:mt-0">
           <div className="border-b border-gray-subtitle py-2 md:px-3">
             <h3 className="tracking-[-0.49px] text-gray-subtitle md:text-lg">
-              한국종축개량협회의 EPD 데이터를 사용하나요?:
+              한국종축개량협회의 EPD 데이터를 사용하나요?
             </h3>
           </div>
           <div className="mt-5 text-[0.93rem] leading-normal tracking-[-0.46px] text-gray-info md:px-3 md:text-base">
