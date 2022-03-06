@@ -56,7 +56,7 @@ const FadeInSection = ({
   }, []);
 
   return (
-    <section ref={domRef} className={(isVisible ? "" : "") + " h-screen"}>
+    <section ref={domRef} className={"h-full"}>
       <div className={(isVisible ? "block" : "hidden") + " h-full"}>
         {children}
       </div>

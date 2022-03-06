@@ -79,7 +79,6 @@
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  height: auto !important;
 }
 .swiper-wrapper {
   min-height: 100%;

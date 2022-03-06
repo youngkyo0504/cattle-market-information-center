@@ -12,9 +12,12 @@ import { MousewheelOptions } from "swiper/types";
 function IntroductionPage() {
   const s = useSwiper();
   const ref = useRef<SwiperCore>();
+  const scrollHeight = document.documentElement.clientHeight;
+
+  console.log(document.documentElement.clientWidth);
+  console.log(scrollHeight);
   useEffect(() => {
     document.body.style.overflowY = "hidden";
-
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 300);
@@ -44,9 +47,11 @@ function IntroductionPage() {
       onInit={(swiper) => {
         ref.current = swiper;
       }}
+      preloadImages={true}
+      height={scrollHeight}
       initialSlide={0}
       modules={[Keyboard, Mousewheel, Pagination]}
-      spaceBetween={10}
+      spaceBetween={0}
       autoHeight={true}
       pagination={{ clickable: true }}
       touchReleaseOnEdges={false}
@@ -79,7 +84,7 @@ function IntroductionPage() {
       }}
       className=""
     >
-      <SwiperSlide className=" h-screen">
+      <SwiperSlide className=" h-full">
         <FadeInSection>
           <article className="flex h-full flex-col justify-around text-center font-bold">
             <div>
@@ -97,7 +102,7 @@ function IntroductionPage() {
           </article>
         </FadeInSection>
       </SwiperSlide>
-      <SwiperSlide className="  h-screen">
+      <SwiperSlide className="  h-full">
         <FadeInSection>
           <article className="flex h-full flex-col justify-evenly text-center font-bold">
             <div className="animate-fade-in-up ">
@@ -127,7 +132,7 @@ function IntroductionPage() {
         </FadeInSection>
       </SwiperSlide>
 
-      <SwiperSlide className=" h-screen bg-[#eeeeee]">
+      <SwiperSlide className=" h-full bg-[#eeeeee]">
         <FadeInSection>
           {" "}
           <article className="mx-auto flex h-full max-w-9xl animate-fade-in-up flex-col justify-evenly text-center font-bold">
@@ -200,7 +205,7 @@ function IntroductionPage() {
         </FadeInSection>
       </SwiperSlide>
 
-      <SwiperSlide className=" h-[80vh] bg-[#363636]">
+      <SwiperSlide className=" h-full bg-[#363636]">
         <div className="presentation-1 flex h-full flex-col">
           <FadeInSection>
             <article className=" flex h-full flex-1 flex-col items-center justify-end text-center font-bold">
