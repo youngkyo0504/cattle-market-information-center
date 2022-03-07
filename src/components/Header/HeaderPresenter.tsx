@@ -1,12 +1,18 @@
+import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import { ILink } from "../../@types/index";
 import Logo from "../../assets/woo-logo.png";
+import MobileNav from "../MobileNav/MobileNav";
 
 interface HeaderProps {
   links: ILink[];
 }
 
 const Header = ({ links }: HeaderProps) => {
+  const [isShowMobileNav, setIsShowMobileNav] = useState<Boolean>(false);
+  const toggleMobileNav = useCallback(() => {
+    setIsShowMobileNav((isShowMobileNav) => !isShowMobileNav);
+  }, []);
   return (
     <nav
       id="header"
@@ -22,8 +28,9 @@ const Header = ({ links }: HeaderProps) => {
           </Link>
         </div>
         <label
+          onClick={toggleMobileNav}
           htmlFor="menu-toggle"
-          className="mr-4 block cursor-pointer md:hidden"
+          className=" block cursor-pointer md:hidden"
         >
           <svg
             className="fill-current text-gray-900"
@@ -35,6 +42,9 @@ const Header = ({ links }: HeaderProps) => {
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
           </svg>
         </label>
+        {isShowMobileNav ? (
+          <MobileNav links={links} toggleMobileNav={toggleMobileNav} />
+        ) : null}
         <input className="hidden" type="checkbox" id="menu-toggle" />
 
         <div
