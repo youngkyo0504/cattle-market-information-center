@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  plugins: [require("@tailwindcss/line-clamp")],
   theme: {
     colors: {
       "hover-light-blue": "#D8E7EF",
@@ -91,6 +92,7 @@ module.exports = {
         title: "1.688rem",
         subtitle: "1.34rem",
         table: "0.969rem",
+        "2xs": "0.5rem",
       },
       maxWidth: {
         "9xl": "70rem",

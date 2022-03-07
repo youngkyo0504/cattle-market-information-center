@@ -16,7 +16,7 @@ const Header = ({ links }: HeaderProps) => {
   return (
     <nav
       id="header"
-      className="absolute top-0 left-0  right-0 z-30 mx-auto w-full bg-transparent px-4 font-spoqa  lg:max-w-9xl "
+      className=" absolute top-0 left-0  right-0 z-30 mx-auto w-full bg-transparent px-4 font-spoqa  lg:max-w-9xl "
     >
       <div className="mx-auto  mt-0 flex w-full flex-wrap items-center justify-between pt-8 md:pt-11  ">
         <div className=" ">

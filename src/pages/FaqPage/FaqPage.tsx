@@ -4,7 +4,7 @@ import QaImage from "../../assets/qa-images/qna@2x.png";
 
 const FaqPage = () => {
   return (
-    <section className="mx-auto mt-24 mb-36 flex min-h-[65vh] max-w-9xl flex-col p-4 md:mt-48 md:flex-row md:justify-between">
+    <section className="mx-auto mt-24 mb-20 flex min-h-[65vh] max-w-9xl flex-col p-4 sm:mb-36 md:mt-48 md:flex-row md:justify-between">
       <div className=" flex flex-col justify-between">
         <div>
           <h1 className="flex flex-col text-3xl font-bold tracking-[-0.73px] text-blue md:flex-row">
