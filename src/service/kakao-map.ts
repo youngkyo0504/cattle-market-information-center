@@ -1,5 +1,6 @@
 import IMap from "../@types/map";
 import ICattleMarketInfo from "../@types/CattleMarketInfo";
+import { CattleMarketInfos, MarketName } from "../@types";
 
 interface IPosition {
   latitude: number;
@@ -9,21 +10,32 @@ interface IPosition {
 class Map {
   private imageSrc: string;
   private imageSize: any;
+  public map: any;
+  private kakao: any;
 
   constructor(
-    public map: any,
-    private kakao: any,
-    public setMarketName: React.Dispatch<React.SetStateAction<string>>,
-    public markers?: IMap<ICattleMarketInfo>
+    public setMarketName: React.Dispatch<React.SetStateAction<MarketName>>,
+    public markers?: CattleMarketInfos
   ) {
-    this.kakao = kakao;
+    this.map = this.makeMap();
     this.imageSrc =
       "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
     this.imageSize = new this.kakao.maps.Size(24, 35);
     this.addControl();
     this.assignMarkers();
   }
-
+  makeMap() {
+    const { kakao }: any = window;
+    this.kakao = kakao;
+    const container = document.getElementById("myMap");
+    const center = new kakao.maps.LatLng(37.50802, 127.062835);
+    const options = {
+      center,
+      level: 12,
+    };
+    const map = new kakao.maps.Map(container, options);
+    return map;
+  }
   addControl() {
     const mapTypeControl = new this.kakao.maps.MapTypeControl();
     // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
@@ -38,15 +50,17 @@ class Map {
   }
 
   assignMarkers() {
-    for (const marketId in this.markers) {
-      const markerImage = this.getMarkerImage();
-      const moveLatLon = this.getLatlLon(this.markers[marketId]["position"]);
-      const marketName = this.markers[marketId]["title"];
-      const markerInfo = { markerImage, moveLatLon, marketId, marketName };
-      const marker = this.getMarker(markerInfo);
-      const customOverlay = this.makeCustomOverlay(markerInfo);
-      console.log(customOverlay);
-      this.addClickEvent(marketId, marker, customOverlay);
+    if (this.markers) {
+      for (const [marketId, market] of Object.entries(this.markers)) {
+        const markerImage = this.getMarkerImage();
+        const moveLatLon = this.getLatlLon(market["position"]);
+        const marketName = market["name"];
+        const markerInfo = { markerImage, moveLatLon, marketId, marketName };
+        const marker = this.getMarker(markerInfo);
+        const customOverlay = this.makeCustomOverlay(markerInfo);
+        console.log(customOverlay);
+        this.addClickEvent(marketId, marker, customOverlay);
+      }
     }
   }
 
@@ -55,6 +69,7 @@ class Map {
     const position = marker.getPosition();
     this.kakao.maps.event.addListener(marker, "click", () => {
       this.setMarketName(title);
+      console.log(position);
       this.panTo(position);
     });
   }

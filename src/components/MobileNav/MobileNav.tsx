@@ -48,10 +48,10 @@ const MobileNav = ({ links, toggleMobileNav }: MobileNavProps) => {
                     target={"#"}
                     href="/cattle-market-information-center/iframe/kpn-family-tree.html"
                   >
-                    <li className="mt-4  ">KPN 족보</li>
+                    <li className="mt-4 hover:font-bold  ">KPN 족보</li>
                   </a>
                   <Link onClick={toggleMobileNav} to={"/kpn/kpn1"}>
-                    <li className="mt-4">KPN 분석</li>
+                    <li className="mt-4 hover:font-bold">KPN 분석</li>
                   </Link>
                 </ul>
               </li>

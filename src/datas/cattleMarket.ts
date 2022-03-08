@@ -1,23 +1,11 @@
-import { ICattleMarketInfo } from "../@types";
-import IMap from "../@types/map";
+import { CattleMarketInfos, ICattleMarketInfo, MarketName } from "../@types";
 
-type MarketName =
-  | "gcch"
-  | "ulc"
-  | "hch"
-  | "anseong"
-  | "gamso"
-  | "gblc"
-  | "sjkj"
-  | "jd"
-  | "jeju";
 //우시장마다 id를 저장하고 id마다 각 정보들을 적어서 넣는다.
 // 계속 늘려나가면 됨
-type CattleMarketInfos = { [K in MarketName]: ICattleMarketInfo };
 
 const cattleMarket: CattleMarketInfos = {
   gcch: {
-    title: "거창축협",
+    name: "거창축협",
     position: {
       latitude: 36.9796624,
       longitude: 127.2914548,
@@ -26,7 +14,7 @@ const cattleMarket: CattleMarketInfos = {
     url: "https://www.gcch.co.kr/",
   },
   ulc: {
-    title: "울산축협",
+    name: "울산축협",
     position: {
       latitude: 37.5989354,
       longitude: 127.0231516,
@@ -36,7 +24,7 @@ const cattleMarket: CattleMarketInfos = {
   },
   // TODO 홍천부터 전화번호랑 다 입력해야됨
   hch: {
-    title: "홍천축협",
+    name: "홍천축협",
     position: {
       latitude: 36.9796624,
       longitude: 127.2914548,
@@ -45,7 +33,7 @@ const cattleMarket: CattleMarketInfos = {
     url: "https://www.hchanwoo.com:461/main/",
   },
   anseong: {
-    title: "안성축협",
+    name: "안성축협",
     position: {
       latitude: 36.9796624,
       longitude: 127.2914548,
@@ -54,7 +42,7 @@ const cattleMarket: CattleMarketInfos = {
     url: "https://anseongch.nonghyup.com:8100/user/indexMain.do?siteId=anseongch",
   },
   gamso: {
-    title: "상주축협",
+    name: "상주축협",
     position: {
       latitude: 36.9796624,
       longitude: 127.2914548,
@@ -63,7 +51,7 @@ const cattleMarket: CattleMarketInfos = {
     url: "https://gamso.nonghyup.com:8100/user/indexMain.do?siteId=gamso",
   },
   gblc: {
-    title: "고창부안축협",
+    name: "고창부안축협",
     position: {
       latitude: 36.9796624,
       longitude: 127.2914548,
@@ -72,7 +60,7 @@ const cattleMarket: CattleMarketInfos = {
     url: "https://gblc.nonghyup.com:8100/user/indexMain.do?siteId=gblc",
   },
   sjkj: {
-    title: "세종공주축협",
+    name: "세종공주축협",
     position: {
       latitude: 36.9796624,
       longitude: 127.2914548,
@@ -81,7 +69,7 @@ const cattleMarket: CattleMarketInfos = {
     url: "https://sjkjch.nonghyup.com:8100/user/indexMain.do?siteId=sjkjch",
   },
   jd: {
-    title: "제천단양축협",
+    name: "제천단양축협",
     position: {
       latitude: 36.9796624,
       longitude: 127.2914548,
@@ -90,7 +78,7 @@ const cattleMarket: CattleMarketInfos = {
     url: "https://jd.nonghyup.com:8100/user/indexMain.do?siteId=jdlck",
   },
   jeju: {
-    title: "제주축협",
+    name: "제주축협",
     position: {
       latitude: 36.9796624,
       longitude: 127.2914548,

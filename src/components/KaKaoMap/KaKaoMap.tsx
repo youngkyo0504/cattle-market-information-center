@@ -1,44 +1,18 @@
-import React, { useCallback } from "react";
-// import Select, {
-//   ControlProps,
-//   MenuProps,
-//   SingleValue,
-//   StylesConfig,
-// } from "react-select";
-// import { cattleMarket } from "../../datas";
-// import { StylesProps } from "styled-system";
-// import { CSSObject, CSSProperties } from "styled-components";
-// import StyledSelect from "../Select/Select";
+import { MarketName } from "../../@types";
 
 interface mapProps {
-  cattleMarketName: string;
-  changeMarket: any;
+  cattleMarketName: MarketName;
 }
-
-// // options에는 select 할 때 사용하는 데이터들을 넣어주면 된다.
-// const options = [
-//   { value: "woolsan", label: "울산" },
-//   { value: "gch", label: "거창" },
-// ];
-
-// const customControlStyles: CSSProperties = {
-//   color: "white",
-//   borderColor: "pink",
-// };
-const Map = ({ cattleMarketName, changeMarket }: mapProps) => {
+const Map = ({ cattleMarketName }: mapProps) => {
   return (
     <>
-      {/* <div
+      <div
         id="myMap"
         style={{
-          width: "500px",
-          height: "500px",
+          width: "100%",
+          height: "600px",
         }}
       ></div>
-      <div>
-        <h2> {cattleMarket[cattleMarketName].title} </h2>
-        <StyledSelect options={options} onChange={changeMarket} />
-      </div> */}
     </>
   );
 };
