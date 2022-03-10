@@ -32,9 +32,6 @@ function MarketList({ marketList, changeState, marketKey }: IMarketListProps) {
               } flex cursor-pointer justify-between border-b  border-b-gray-info px-1.5 py-2 text-xs -tracking-[0.025rem] hover:fill-blue hover:text-blue sm:border-0 sm:text-base`}
             >
               <span>{market.name}</span>
-              <span>
-                <PlusIcon className="h-4 sm:hidden" />
-              </span>
             </li>
           );
         })}

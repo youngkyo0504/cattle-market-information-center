@@ -49,7 +49,10 @@ const Iframe = ({ src, className }: { src: string; className: string }) => {
   }, []);
   return (
     <>
-      <div ref={loadingRef} className="flex w-full items-center justify-center">
+      <div
+        ref={loadingRef}
+        className="flex h-screen w-full items-center justify-center"
+      >
         <div className={"lds-dual-ring"}></div>
       </div>
       <iframe

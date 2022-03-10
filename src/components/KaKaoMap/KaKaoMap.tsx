@@ -6,13 +6,7 @@ interface mapProps {
 const Map = ({ cattleMarketName }: mapProps) => {
   return (
     <>
-      <div
-        id="myMap"
-        style={{
-          width: "100%",
-          height: "600px",
-        }}
-      ></div>
+      <div id="myMap" className="aspect-[1.5/1]   w-full "></div>
     </>
   );
 };

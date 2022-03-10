@@ -19,8 +19,8 @@ class Map {
   ) {
     this.map = this.makeMap();
     this.imageSrc =
-      "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
-    this.imageSize = new this.kakao.maps.Size(24, 35);
+      "/cattle-market-information-center/assets/kakaomap-overlay.png";
+    this.imageSize = new this.kakao.maps.Size(20, 30);
     this.addControl();
     this.assignMarkers();
   }
@@ -28,7 +28,7 @@ class Map {
     const { kakao }: any = window;
     this.kakao = kakao;
     const container = document.getElementById("myMap");
-    const center = new kakao.maps.LatLng(37.50802, 127.062835);
+    const center = new kakao.maps.LatLng(36.80802, 127.802835);
     const options = {
       center,
       level: 12,

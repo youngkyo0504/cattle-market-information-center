@@ -4,7 +4,7 @@
 }
 .customoverlay {
   position: relative;
-  bottom: 50px;
+  bottom: 44px;
   border-radius: 6px;
   border: 1px solid #ccc;
   border-bottom: 2px solid #ddd;
@@ -23,18 +23,14 @@
   font-size: 14px;
   font-weight: bold;
   overflow: hidden;
-  background: #d95050;
-  background: #c68a12
-    url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png)
-    no-repeat right 14px center;
 }
 .customoverlay .title {
   display: block;
   text-align: center;
   background: #fff;
-  margin-right: 35px;
-  padding: 10px 15px;
-  font-size: 14px;
+  /* margin-right: 35px; */
+  padding: 8px 12px;
+  font-size: 12px;
   font-weight: bold;
 }
 .customoverlay:after {

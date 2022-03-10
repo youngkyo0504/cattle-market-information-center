@@ -8,13 +8,13 @@ const MarketsPage = () => {
 
   return (
     <>
-      <div className="mx-auto mt-28 mb-20 flex min-h-[70vh] max-w-9xl flex-col justify-between sm:mb-24  md:mt-56 md:flex-row">
+      <div className="mx-auto mt-28 mb-20 flex min-h-[70vh] max-w-9xl flex-col sm:mb-24 sm:justify-between  md:mt-56 md:flex-row">
         <MarketList
           marketKey={cattleMarketName}
           changeState={changeMarket}
           marketList={cattleMarket}
         />
-        <div className="flex w-full max-w-[865px] flex-col md:mt-6 ">
+        <div className="flex w-full max-w-[800px] flex-col p-4 md:mt-6 ">
           <KaKaoMapContainer
             setCattleMarket={setCattleMarket}
             cattleMarketName={cattleMarketName}

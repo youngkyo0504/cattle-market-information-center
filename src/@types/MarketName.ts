@@ -7,5 +7,6 @@ type MarketName =
   | "gblc"
   | "sjkj"
   | "jd"
+  | "jangseong"
   | "jeju";
 export default MarketName;
