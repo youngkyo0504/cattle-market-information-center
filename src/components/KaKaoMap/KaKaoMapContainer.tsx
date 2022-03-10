@@ -24,7 +24,7 @@ const MarketInfoItem = ({
       </span>
     </li>
     <li className="mb-2 flex w-full items-center tracking-[-0.0319rem] last:mb-0">
-      <TelIcon className=" mr-2 flex h-3 sm:mr-4 sm:h-5 " />
+      <TelIcon className=" mr-2 flex h-3 sm:mr-3 sm:h-5 " />
 
       <span className="mr-2">전화번호 </span>
       <span className="break-words text-gray-info">

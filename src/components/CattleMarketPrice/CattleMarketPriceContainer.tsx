@@ -1,6 +1,5 @@
 import Highcharts from "highcharts";
 import React from "react";
-import stockOptions from "../../datas/minimalData";
 import TrendGraph from "../../pages/TrendPage/TrendGraph";
 import HighChartCowDataMaker from "../../service/highcart-data-maker/highchart-cow-data-maker";
 import HighchartCowOptionMaker from "../../service/highchart-option-maker/highchart-cow-option-maker";
@@ -23,8 +22,6 @@ const seriesoption: Highcharts.SeriesOptionsType[] = [
     color: "#d48f93",
     type: "line",
     lineWidth: 1,
-
-    // data: [...suPriceData.data.lastYearData, ...suPriceData.data.thisYearData],
     data: [...suPriceData.data.thisYearData],
     // TODO line 굵기나 다른 것 변경 예정
     states: {

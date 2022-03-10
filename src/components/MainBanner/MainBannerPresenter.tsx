@@ -9,7 +9,7 @@ const MainBanner = () => {
           "transparent linear-gradient(0deg, #FFFFFF 0%, #EEEAE7 100%) 0% 0% no-repeat padding-box",
       }}
     >
-      <div className="mx-auto p-16 px-4 pt-32 font-spoqa sm:max-w-xl md:max-w-full md:px-24 md:pt-48 lg:max-w-7xl lg:px-2 ">
+      <div className="mx-auto animate-fade-in-up p-16 px-4 pt-32 font-spoqa sm:max-w-xl md:max-w-full md:px-24 md:pt-48 lg:max-w-7xl lg:px-2 ">
         <div className="mx-auto max-w-xl lg:max-w-6xl">
           <div className="flex flex-col  sm:text-center ">
             <div className="mb-12  max-w-xl text-center md:mx-auto lg:max-w-6xl">

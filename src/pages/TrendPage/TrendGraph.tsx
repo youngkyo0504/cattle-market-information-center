@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-import { cowStockOptions } from "../../datas";
 import Highcharts from "highcharts";
 import ChartContainer from "../../components/Chart/ChartContainer";
 import ICowGraphInfo from "../../@types/CowGraphInfo";
