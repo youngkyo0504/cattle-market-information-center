@@ -2,22 +2,24 @@ import Card3 from "./Card3";
 import Card4 from "./Card4";
 import Card2 from "./Card2";
 import Card1 from "./Card1";
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import ImageGeo from "../../assets/presentation/1.1.png";
 import SwiperCore, { Pagination, Mousewheel, Keyboard } from "swiper";
 import FadeInSection from "../../components/FadeInSection/FadeInsection";
 import { MousewheelOptions } from "swiper/types";
+import useToggleScroll from "../../hooks/useToggleScroll";
+import { isMobileWidth } from "../../util";
 
 function IntroductionPage() {
+  isMobileWidth();
   const s = useSwiper();
   const ref = useRef<SwiperCore>();
   const scrollHeight = document.documentElement.clientHeight;
 
   console.log(document.documentElement.clientWidth);
   console.log(scrollHeight);
+  useToggleScroll();
   useEffect(() => {
-    document.body.style.overflowY = "hidden";
     setTimeout(() => {
       window.scrollTo(0, 0);
     }, 300);
@@ -33,14 +35,12 @@ function IntroductionPage() {
             mousewheelOption.releaseOnEdges = false;
             ref.current.mousewheel.enable();
             ref.current.enable();
+            document.body.style.overflow = "hidden";
           }
         }, 300);
       }
     };
-    return () => {
-      console.log("auto");
-      document.body.style.overflowY = "auto";
-    };
+    return () => {};
   }, []);
   return (
     <Swiper
