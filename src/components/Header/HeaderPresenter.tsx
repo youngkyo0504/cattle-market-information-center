@@ -18,7 +18,7 @@ const Header = ({ links }: HeaderProps) => {
       id="header"
       className=" absolute top-0 left-0  right-0 z-30 mx-auto w-full bg-transparent px-4 font-spoqa  lg:max-w-9xl "
     >
-      <div className="mx-auto  mt-0 flex w-full flex-wrap items-center justify-between pt-8 md:pt-11  ">
+      <div className="mx-auto  mt-0 flex w-full  items-center justify-between pt-8 md:pt-11  ">
         <div className=" ">
           <Link
             className="text-gray-800 flex items-center font-bold tracking-wide no-underline hover:no-underline "
@@ -54,14 +54,14 @@ const Header = ({ links }: HeaderProps) => {
           <nav>
             <ul className="h-8  justify-between pt-4 text-base text-gray-nav md:flex md:pt-0">
               {links.map((link) => (
-                <li className="inline-block px-4 text-[0.95rem] no-underline   transition-all ease-in  last:pr-content  hover:font-bold hover:text-black hover:decoration-2">
+                <li className="inline-block px-4 no-underline  transition-all  ease-in   last:pr-content hover:font-bold  hover:text-black  hover:decoration-2 md:text-sm lg:text-[0.95rem]">
                   <Link className="" to={link.src ? link.src : ""}>
                     {link.name}
                   </Link>
                 </li>
               ))}
               <div className="group relative">
-                <button className="flex flex-row items-center px-4 text-[0.95rem] no-underline   transition-all ease-in last:px-content group-hover:font-bold group-hover:text-black">
+                <button className="flex flex-row items-center px-4 no-underline transition-all  ease-in   last:px-content group-hover:font-bold group-hover:text-black md:text-sm lg:text-[0.95rem]">
                   <span>KPN 분석</span>
                   <span className="pl-1 text-[0.2rem] text-blue">▼</span>
                 </button>
