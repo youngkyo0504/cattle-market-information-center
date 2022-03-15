@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ILink } from "../../@types";
 import { ReactComponent as XIcon } from "../../assets/x.svg";
 import useToggleScroll from "../../hooks/useToggleScroll";
+import { isMobileWidth } from "../../util";
 interface MobileNavProps {
   links: ILink[];
   toggleMobileNav: () => void;

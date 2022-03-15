@@ -1,6 +1,5 @@
-const isMobileWidth = () => {
-  console.log(window.innerWidth);
-  return window.innerWidth;
+const isMobileWidth = (windowWidth: number) => {
+  return windowWidth < 1100;
 };
 
 export default isMobileWidth;

@@ -1,3 +1,4 @@
 import isMobileWidth from "./isMobileWidth";
+import scrollToTop from "./scrollToTop";
 
-export { isMobileWidth };
+export { isMobileWidth, scrollToTop };

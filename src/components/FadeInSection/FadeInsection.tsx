@@ -1,10 +1,12 @@
 import React, { ReactNode, useEffect, useRef } from "react";
 const FadeInSection = ({
   children,
+  threshold,
   cb,
 }: {
   children: ReactNode | ReactNode[];
   cb?: Function;
+  threshold: number;
 }) => {
   const domRef = useRef<HTMLElement>(null);
 
@@ -13,7 +15,7 @@ const FadeInSection = ({
     if (!isVisible && cb) {
       cb();
     } else if (cb && isVisible) {
-      //   console.log("appear", cb);
+      // console.log("appear", cb);
       //   const a = document.querySelector<HTMLElement>("#header");
       //   a && (a.style.display = "block");
     }
@@ -32,6 +34,7 @@ const FadeInSection = ({
         if (entries[0].isIntersecting) {
           // Not possible to set it back to false like this:
           setVisible(true);
+          console.log("visible");
 
           // No need to keep observing:
           if (domRef.current) {
@@ -42,7 +45,7 @@ const FadeInSection = ({
           setVisible(false);
         }
       },
-      { threshold: [1] }
+      { threshold: [threshold] }
     );
     if (domRef.current) {
       observer.observe(domRef.current);
@@ -56,7 +59,7 @@ const FadeInSection = ({
   }, []);
 
   return (
-    <section ref={domRef} className={"h-full"}>
+    <section ref={domRef} className={"min-h-screen"}>
       <div className={(isVisible ? "block" : "hidden") + " h-full"}>
         {children}
       </div>
