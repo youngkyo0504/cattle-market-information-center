@@ -7,14 +7,20 @@ interface IMarketListProps {
   changeState: any;
   marketList: CattleMarketInfos;
   marketKey: MarketName;
+  title: string;
 }
 
-function MarketList({ marketList, changeState, marketKey }: IMarketListProps) {
+function MarketList({
+  marketList,
+  changeState,
+  marketKey,
+  title,
+}: IMarketListProps) {
   console.log(marketKey);
   return (
     <div className="px-4  md:mt-6">
       <h1 className="mb-12 hidden px-1.5 text-2xl font-bold text-blue md:block">
-        우시장 둘러보기
+        {title}
       </h1>
       <div className="flex flex-col">
         <div className="flex justify-between border-b border-blue px-1.5 pb-3.5 font-medium  -tracking-[0.03rem] text-blue sm:mb-3  sm:text-lg ">

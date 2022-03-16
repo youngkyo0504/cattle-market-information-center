@@ -10,6 +10,7 @@ const CattlePage = () => {
     <>
       <div className="mx-auto mt-28 mb-20 flex min-h-[70vh] max-w-9xl flex-col justify-between sm:mb-24  md:mt-56 md:flex-row">
         <MarketList
+          title={"출품우 정보"}
           marketKey={cattleMarketName}
           changeState={changeMarket}
           marketList={cattleMarket}
@@ -18,7 +19,7 @@ const CattlePage = () => {
         <div className="flex w-full max-w-[865px] items-center justify-center ">
           <Iframe
             className={" mt-4 min-h-[1200px] w-full overflow-y-auto md:px-3"}
-            src={"/cattle-market-information-center/iframe/woo-final.html"}
+            src={`/cattle-market-information-center/iframe/${cattleMarketName}.html`}
           />
         </div>
       </div>

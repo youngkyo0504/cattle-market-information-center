@@ -2,10 +2,9 @@ import styles from "./Page.module.scss";
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./MainPage/MainPage";
+import IntroductionPage from "./IntroductionPage/IntroductionPage";
 // import MarketsPage from "./MarketsPage/MarketsPage";
-const IntroductionPage = lazy(
-  () => import("./IntroductionPage/IntroductionPage")
-);
+
 const CattlePage = lazy(() => import("./CattlePage/CattlePage"));
 const FaqPage = lazy(() => import("./FaqPage/FaqPage"));
 const KPNPage = lazy(() => import("./KPNPage/KPNPage"));

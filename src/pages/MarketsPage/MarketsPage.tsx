@@ -10,6 +10,7 @@ const MarketsPage = () => {
     <>
       <div className="mx-auto mt-28 mb-20 flex min-h-[70vh] max-w-9xl flex-col sm:mb-24 sm:justify-between  md:mt-56 md:flex-row">
         <MarketList
+          title={"우시장 정보"}
           marketKey={cattleMarketName}
           changeState={changeMarket}
           marketList={cattleMarket}
