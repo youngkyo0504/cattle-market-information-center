@@ -103,7 +103,7 @@ const cattleMarket: CattleMarketInfos = {
     address: "장성군 황룡면 월평리 168-5",
     "opening-date": "매주 목요일",
     phone: "061-393-6771 ~ 3",
-    url: "http://jd.nonghyup.com",
+    url: "http://jangseongch.nonghyup.com",
   },
 
   jeju: {

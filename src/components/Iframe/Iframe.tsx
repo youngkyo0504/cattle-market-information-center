@@ -5,6 +5,10 @@ const Iframe = ({ src, className }: { src: string; className: string }) => {
   const [visible, setVisible] = useState(true);
   const onLoadIframe: ReactEventHandler<HTMLIFrameElement> = (event) => {
     console.log(event);
+    if (loadingRef.current) {
+      loadingRef.current.style.display = "block";
+      // setVisible(false);
+    }
     const iframeElement = event.currentTarget;
     if (iframeElement.contentWindow) {
       iframeElement.style.display = "block";
@@ -21,8 +25,8 @@ const Iframe = ({ src, className }: { src: string; className: string }) => {
       // 원래 iframe 내부의 content height 을 불러온다.
     }
     if (loadingRef.current) {
-      // loadingRef.current.style.display = "none";
-      setVisible((per) => !per);
+      loadingRef.current.style.display = "none";
+      // setVisible(false);
     }
   };
 
@@ -50,14 +54,14 @@ const Iframe = ({ src, className }: { src: string; className: string }) => {
   }, []);
   return (
     <>
-      {visible ? (
-        <div
-          ref={loadingRef}
-          className="flex h-screen w-full items-center justify-center"
-        >
-          <div className={"lds-dual-ring"}></div>
-        </div>
-      ) : null}
+      <div
+        ref={loadingRef}
+        className={`${
+          visible ? "" : "hidden"
+        } flex h-screen w-full items-center justify-center`}
+      >
+        <div className={"lds-dual-ring"}></div>
+      </div>
 
       <iframe
         hidden
