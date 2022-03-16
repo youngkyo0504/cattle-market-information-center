@@ -6,6 +6,7 @@ import useMap from "../../hooks/useMap";
 import { ReactComponent as PlaceIcon } from "../../assets/market-info-icon/icon1_place.svg";
 import { ReactComponent as TelIcon } from "../../assets/market-info-icon/icon2_tel.svg";
 import { ReactComponent as DayIcon } from "../../assets/market-info-icon/icon3_day.svg";
+import { ExternalLinkIcon } from "@heroicons/react/outline";
 
 // *스크립트로 kakao maps api를 심어서 가져오면 window전역 객체에 들어가게 된다. 그리고 그걸 사용하려면 window에서 kakao객체를 뽑아서 사용하면 된다.
 
@@ -69,9 +70,14 @@ const KaKaoMapContainer: FC<IKaKaoMapContainerprops> = ({
             href={cattleMarket[cattleMarketName].url}
             target="#"
           >
-            <span className="flex items-center justify-center">
-              {cattleMarket[cattleMarketName].name} 우시장
-            </span>
+            <div className="flex items-center justify-center">
+              <span className="">
+                {cattleMarket[cattleMarketName].name} 우시장
+              </span>
+              <span>
+                <ExternalLinkIcon className="ml-1 h-6 transition-all group-hover:stroke-[2.4px]" />
+              </span>
+            </div>
           </a>
         </h2>
         <ul className="flex max-w-[26rem] flex-col text-[0.625rem] tracking-[-0.54px] sm:text-lg lg:w-full">

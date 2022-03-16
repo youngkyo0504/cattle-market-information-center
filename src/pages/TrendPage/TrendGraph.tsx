@@ -41,7 +41,7 @@ const TrendGraph = ({
                 {graphInfo.change > 0 ? "▲" : "▼"} {graphInfo.change}
               </div>
               {/* ▲ */}
-              <div className="pl-3 ">-{graphInfo.rateOfChagne}%</div>
+              <div className="pl-3 ">{graphInfo.rateOfChagne}%</div>
             </div>
           </div>
         </div>
