@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/cattle-market-information-center/static/css/main.db3f7725.css",
+    "main.css": "/cattle-market-information-center/static/css/main.8325e2d6.css",
     "main.js": "/cattle-market-information-center/static/js/main.b9104994.js",
     "static/js/462.0061a8c2.chunk.js": "/cattle-market-information-center/static/js/462.0061a8c2.chunk.js",
     "static/js/0.e3403881.chunk.js": "/cattle-market-information-center/static/js/0.e3403881.chunk.js",
@@ -28,7 +28,7 @@
     "static/media/mail.svg": "/cattle-market-information-center/static/media/mail.fe9d1a2df8083ef4c7e8e47539a1d539.svg",
     "static/media/facebook.svg": "/cattle-market-information-center/static/media/facebook.ef3fce3dafe8afcba1ad71fb9d900ec8.svg",
     "static/media/x.svg": "/cattle-market-information-center/static/media/x.f9ef5bb990864033a4bb15d0c9aaef75.svg",
-    "main.db3f7725.css.map": "/cattle-market-information-center/static/css/main.db3f7725.css.map",
+    "main.8325e2d6.css.map": "/cattle-market-information-center/static/css/main.8325e2d6.css.map",
     "main.b9104994.js.map": "/cattle-market-information-center/static/js/main.b9104994.js.map",
     "462.0061a8c2.chunk.js.map": "/cattle-market-information-center/static/js/462.0061a8c2.chunk.js.map",
     "0.e3403881.chunk.js.map": "/cattle-market-information-center/static/js/0.e3403881.chunk.js.map",
@@ -37,7 +37,7 @@
     "787.ded624b7.chunk.js.map": "/cattle-market-information-center/static/js/787.ded624b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db3f7725.css",
+    "static/css/main.8325e2d6.css",
     "static/js/main.b9104994.js"
   ]
 }
