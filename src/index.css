@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* font */
+
 @font-face {
   font-family: "Spoqa Han Sans";
   font-weight: 700;
@@ -9,6 +9,7 @@
     url("./fonts/SpoqaHanSans/SpoqaHanSansNeo-Bold.woff") format("woff"),
     url("./fonts/SpoqaHanSans/SpoqaHanSansNeo-Bold.woff2") format("woff2"),
     url("./fonts/SpoqaHanSans/SpoqaHanSansNeo-Bold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
