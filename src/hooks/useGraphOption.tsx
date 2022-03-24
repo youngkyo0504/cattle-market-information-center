@@ -14,7 +14,6 @@ const amPriceData = highChartDataMaker.getData(amPrice, 10, 2);
 const meanMeatPriceData = highChartDataMaker.getData(meanMeatPrice, 10);
 
 const useGraphOption = () => {
-  console.log([...suPriceData.data.lastYearData]);
   const seriesoption: Highcharts.SeriesOptionsType[] = [
     {
       name: "수송아지",

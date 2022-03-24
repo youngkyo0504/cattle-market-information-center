@@ -20,7 +20,7 @@ const OnePage = () => {
   // const [currentPage, setCurrentPage] = useState(0);
   // const handlePageChange = (number: number) => {
   //   setCurrentPage(number);
-  //   console.log(currentPage);
+  //
   //   if (currentPage > 1) {
   //     document.body.style.overflowY = "scroll";
   //   } else {
@@ -31,7 +31,7 @@ const OnePage = () => {
   // const handleBeforePageChange = (number: number) => {};
   // useEffect(() => {
   //   const navBar = document.querySelector<HTMLHeadElement>(".navbar");
-  //   console.log(navBar);
+  //
   //   if (navBar) {
   //     navBar.style.zIndex = "999999";
   //   }

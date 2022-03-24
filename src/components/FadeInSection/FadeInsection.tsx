@@ -15,7 +15,7 @@ const FadeInSection = ({
     if (!isVisible && cb) {
       cb();
     } else if (cb && isVisible) {
-      // console.log("appear", cb);
+      //
       //   const a = document.querySelector<HTMLElement>("#header");
       //   a && (a.style.display = "block");
     }
@@ -34,14 +34,12 @@ const FadeInSection = ({
         if (entries[0].isIntersecting) {
           // Not possible to set it back to false like this:
           setVisible(true);
-          console.log("visible");
 
           // No need to keep observing:
           if (domRef.current) {
             observer.unobserve(domRef.current);
           }
         } else {
-          console.log("false");
           setVisible(false);
         }
       },

@@ -4,7 +4,6 @@ const Iframe = ({ src, className }: { src: string; className: string }) => {
   const loadingRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(true);
   const onLoadIframe: ReactEventHandler<HTMLIFrameElement> = (event) => {
-    console.log(event);
     if (loadingRef.current) {
       loadingRef.current.style.display = "block";
       // setVisible(false);
@@ -20,7 +19,7 @@ const Iframe = ({ src, className }: { src: string; className: string }) => {
         iframeElement.contentWindow.document.body.clientHeight,
         iframeElement.contentWindow.document.documentElement.clientHeight
       );
-      console.log(scrollHeight);
+
       iframeElement.height = scrollHeight + "px";
       // 원래 iframe 내부의 content height 을 불러온다.
     }

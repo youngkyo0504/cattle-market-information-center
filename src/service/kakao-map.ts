@@ -58,7 +58,7 @@ class Map {
         const markerInfo = { markerImage, moveLatLon, marketId, marketName };
         const marker = this.getMarker(markerInfo);
         const customOverlay = this.makeCustomOverlay(markerInfo);
-        console.log(customOverlay);
+
         this.addClickEvent(marketId, marker, customOverlay);
       }
     }
@@ -69,7 +69,7 @@ class Map {
     const position = marker.getPosition();
     this.kakao.maps.event.addListener(marker, "click", () => {
       this.setMarketName(title);
-      console.log(position);
+
       this.panTo(position);
     });
   }
@@ -91,7 +91,6 @@ class Map {
       yAnchor: 1,
     });
     const hello = () => {
-      console.log("hello");
       this.setMarketName(marketId);
       this.panTo(moveLatLon);
     };
@@ -136,7 +135,7 @@ class Map {
 
   setCenter(moveLatLon: any) {
     // 이동할 위도 경도 위치를 생성합니다
-    console.log(moveLatLon);
+
     // 지도 중심을 이동 시킵니다
     this.map.setLevel(4);
     this.map.setCenter(moveLatLon);

@@ -16,7 +16,6 @@ function MarketList({
   marketKey,
   title,
 }: IMarketListProps) {
-  console.log(marketKey);
   return (
     <div className="px-4  md:mt-6">
       <h1 className="mb-12 hidden px-1.5 text-2xl font-bold text-blue md:block">

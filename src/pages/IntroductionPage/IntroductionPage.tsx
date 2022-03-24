@@ -49,7 +49,6 @@ function IntroductionPage() {
   const { setBodyOverflow } = useToggleScroll();
 
   const resizeHandler = throttle(() => {
-    console.log(window.innerWidth);
     setWindowWidth(window.innerWidth);
     setScrollHeight(document.documentElement.clientHeight);
   }, 400);
@@ -60,9 +59,7 @@ function IntroductionPage() {
   }, []);
 
   useEffect(() => {
-    console.log(windowWidth);
     if (isMobileWidth(windowWidth)) {
-      console.log("디스트로이");
       swiperRef.current?.destroy(false, true);
       setBodyOverflow("auto");
     }
@@ -86,9 +83,6 @@ function IntroductionPage() {
         swiperRef.current?.mousewheel.enable();
         swiperRef.current.update();
       }
-
-      console.log(swiperRef.current?.params);
-      console.log(swiperRef.current?.mousewheel.enabled);
 
       setBodyOverflow("hidden");
       window.addEventListener("keydown", eventHandler.restartSwiperByKeyBoard);

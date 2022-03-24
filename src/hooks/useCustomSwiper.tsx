@@ -29,7 +29,6 @@ const useCustomSwiper = () => {
 
   const restartSwiper = useCallback(() => {
     setTimeout(() => {
-      console.log("hey");
       if (swiperRef.current) {
         const mousewheelOption = swiperRef.current.params
           .mousewheel as MousewheelOptions;
