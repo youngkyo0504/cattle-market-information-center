@@ -1,6 +1,4 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import bannerImgae from "../../assets/cattle.png";
 const MainBanner = () => {
   return (
     <div
@@ -19,7 +17,7 @@ const MainBanner = () => {
               </h2>
             </div>
             <div className="mx-auto flex">
-              <Link to="/">
+              <Link to="/cattle">
                 <span className="traking-[-0.75px] -deep-purple-accent-400 hover:-deep-purple-accent-700 focus:shadow-outline inline-flex  items-center justify-center rounded-4xl bg-blue  py-3 px-7 font-spoqa text-xl  font-bold -tracking-wide   text-white shadow-md transition duration-200 focus:outline-none md:py-4 md:px-9 md:text-2xl">
                   우시장 둘러보기
                 </span>

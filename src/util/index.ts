@@ -1,4 +1,4 @@
 import isMobileWidth from "./isMobileWidth";
 import scrollToTop from "./scrollToTop";
-
-export { isMobileWidth, scrollToTop };
+import lazyWithPreload from "./lazyWithPreload";
+export { isMobileWidth, scrollToTop, lazyWithPreload };

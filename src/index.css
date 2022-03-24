@@ -9,7 +9,7 @@
     url("./fonts/SpoqaHanSans/SpoqaHanSansNeo-Bold.woff") format("woff"),
     url("./fonts/SpoqaHanSans/SpoqaHanSansNeo-Bold.woff2") format("woff2"),
     url("./fonts/SpoqaHanSans/SpoqaHanSansNeo-Bold.ttf") format("truetype");
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -19,6 +19,7 @@
     url("./fonts/SpoqaHanSans/SpoqaHanSansNeo-Medium.woff") format("woff"),
     url("./fonts/SpoqaHanSans/SpoqaHanSansNeo-Medium.woff2") format("woff2"),
     url("./fonts/SpoqaHanSans/SpoqaHanSansNeo-Medium.ttf") format("truetype");
+  font-display: block;
 }
 body {
   margin: 0;

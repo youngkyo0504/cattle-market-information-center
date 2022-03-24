@@ -1,16 +1,19 @@
-import styles from "./Page.module.scss";
-import React, { Suspense, lazy } from "react";
+import { Suspense, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./MainPage/MainPage";
 import IntroductionPage from "./IntroductionPage/IntroductionPage";
-// import MarketsPage from "./MarketsPage/MarketsPage";
+import { lazyWithPreload } from "../util";
+import preloadImage from "../util/preloadImages";
 
-const CattlePage = lazy(() => import("./CattlePage/CattlePage"));
-const FaqPage = lazy(() => import("./FaqPage/FaqPage"));
-const KPNPage = lazy(() => import("./KPNPage/KPNPage"));
-const MarketsPage = lazy(() => import("./MarketsPage/MarketsPage"));
+const CattlePage = lazyWithPreload(() => import("./CattlePage/CattlePage"));
+const FaqPage = lazyWithPreload(() => import("./FaqPage/FaqPage"));
+const KPNPage = lazyWithPreload(() => import("./KPNPage/KPNPage"));
+const MarketsPage = lazyWithPreload(() => import("./MarketsPage/MarketsPage"));
 
 const Page = () => {
+  useEffect(() => {
+    preloadImage(["/cattle-market-information-center/assets/1.1.png"]);
+  });
   return (
     <main className={"flex-1"}>
       <Suspense fallback={<div></div>}>
