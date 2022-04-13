@@ -1,4 +1,6 @@
 import React, { ReactEventHandler, useEffect, useRef, useState } from "react";
+const TABLE_SIZE = 1113.96;
+
 const Iframe = ({ src, className }: { src: string; className: string }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const loadingRef = useRef<HTMLDivElement>(null);
@@ -17,7 +19,8 @@ const Iframe = ({ src, className }: { src: string; className: string }) => {
         iframeElement.contentWindow.document.body.offsetHeight,
         iframeElement.contentWindow.document.documentElement.offsetHeight,
         iframeElement.contentWindow.document.body.clientHeight,
-        iframeElement.contentWindow.document.documentElement.clientHeight
+        iframeElement.contentWindow.document.documentElement.clientHeight,
+        TABLE_SIZE
       );
 
       iframeElement.height = scrollHeight + "px";
@@ -63,10 +66,8 @@ const Iframe = ({ src, className }: { src: string; className: string }) => {
       </div>
 
       <iframe
-        hidden
-        loading="lazy"
         ref={iframeRef}
-        className={className}
+        className={className + " hidden"}
         src={src}
         frameBorder="0"
         scrolling="no"
